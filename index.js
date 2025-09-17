@@ -612,7 +612,7 @@ client.on('messageCreate', async message => {
         db.run('UPDATE users SET xp = ?, level = ?, last_message = ? WHERE id = ?', [newXP, newLevel, now, userId]);
 
         if (newLevel > row.level) {
-            const levelChannel = client.channels.cache.get('1417099517999714396');
+            const levelChannel = client.channels.cache.get('1417908123532001371');
             if (levelChannel) {
                 const embed = createLevelUpEmbed(message.author, newLevel, newXP);
                 await levelChannel.send({ embeds: [embed] });
